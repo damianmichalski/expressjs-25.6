@@ -38,21 +38,20 @@ app.get('/signup', function(req, res){
 });
 
 app.get('/userform', function (req, res) {
-        const response = {
-            name: req.query.name,
-            password: req.query.password
-        };
-        if (response.name == 'admin' && response.password == 'admin') {
-            res.render('welcome2');
-        }
-        
-    });
+    const response = {
+      name: req.query.name,
+      password: req.query.password
+    };
+    if (response.name == 'admin' && response.password == 'admin') {
+      res.render('welcome2');
+    }
+});
 
 app.get('/auth/google', function(req, res){
     res.render('welcome');
 });
 
-var server = app.listen(2000, 'localhost', function() {
+var server = app.listen(3000, 'localhost', function() {
     var host = server.address().address;
     var port = server.address().port;
 
